@@ -5,8 +5,8 @@ import argparse
 from scienceworld import ScienceWorldEnv
 
 
-def randomModel(args):
-    """ Example random agent -- randomly picks an action at each step. """
+def gpt4allModel(args):
+    """ Example GPT-4-ALL agent -- uses GPT-4-All to generate actions. """
     exitCommands = ["quit", "exit"]
 
     taskIdx = args['task_num']
@@ -207,7 +207,7 @@ def main():
     args = parse_args()
     random.seed(args["seed"])
     args["simplification_str"] = build_simplification_str(args)
-    randomModel(args)
+    gpt4allModel(args)
 
 
 if __name__ == "__main__":
